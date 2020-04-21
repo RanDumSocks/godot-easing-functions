@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="Marbster"
 run/main_scene="res://scenes/menu/menu.tscn"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "CustomButtonShapeNode" )
+
 [input]
 
 ui_accept={
