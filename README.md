@@ -8,6 +8,12 @@ This repo includes an entire sample project, which is basically just this:
 ![easingTest](https://user-images.githubusercontent.com/23219465/80032261-c51e8680-849f-11ea-8ada-07ac9f3e4629.gif)
 There is a settings script in `res://scripts/Settings.gd` which you can use to modify how the easing functions are calculated.
 
+||Sine|Quad|Poly|Expo|Circ|Back|Elastic|Bounce|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|In|`easeInSine`|`easeInQuad`|`easeInPoly`|`easeInExpo`|`easeInCirc`|`easeInBack`|`easeInElastic`|`easeInBounce`|
+|Out|`easeOutSine`|`easeOutQuad`|`easeOutPoly`|`easeOutExpo`|`easeOutCirc`|`easeOutBack`|`easeOutElastic`|`easeOutBounce`|
+|InOut|`easeInOutSine`|`easeInOutQuad`|`easeInOutPoly`|`easeInOutExpo`|`easeInOutCirc`|`easeInOutBack`|`easeInOutElastic`|`easeInOutBounce`|
+
 ## Adding to your project
 Download and add `Ease.gd` somewhere in your project and AutoLoad it by going to Project > Project Settings > AutoLoad. Select the `Ease.gd` file in your project, click add, and you are ready to go! Just call the functions using `Ease.<function_name>` from anywhere in your project.
 
