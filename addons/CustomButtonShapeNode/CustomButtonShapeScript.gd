@@ -2,22 +2,44 @@ tool
 extends Area2D
 # Button which has a custom shape and sprite
 
+signal pressed
+
 # Child sprite node
 var _sprite
 # Number of child sprite nodes
 var _sprite_count
+# Whether a click is sustained in hovering
+var _click_hover := false
+# Whether the mouse is hovering over the object
+var hovering := false
 
 func _ready():
    get_sprite()
    get_tree().connect("tree_changed", self, "_on_tree_changed")
+   self.connect("mouse_entered", self, "_on_mouse_entered")
+   self.connect("mouse_exited", self, "_on_mouse_exited")
+   for child in get_children():
+      child.position = position
 
 func _input_event(_viewport, event, _shape_idx):
-   if event.is_action_released("ui_accept"):
-      print(event)
+   if event.is_action_pressed("ui_accept"):
+      _click_hover = true
+   elif event.is_action_released("ui_accept"):
+      if _click_hover:
+         emit_signal("pressed")
+      _click_hover = false
+      
 
 func _on_tree_changed():
    get_sprite()
    _get_configuration_warning()
+
+func _on_mouse_entered():
+   hovering = true
+   
+func _on_mouse_exited():
+   hovering = false
+   _click_hover = false
 
 func _get_configuration_warning():
    var return_msg = ""

@@ -2,11 +2,11 @@
 
 [ext_resource path="res://scenes/menu/scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://scenes/menu/scripts/Background.gd" type="Script" id=2]
-[ext_resource path="res://scenes/menu/images/play.png" type="Texture" id=4]
-[ext_resource path="res://addons/CustomButtonShapeNode/CustomButtonShapeScript.gd" type="Script" id=5]
+[ext_resource path="res://scenes/menu/images/play.png" type="Texture" id=3]
+[ext_resource path="res://scenes/menu/scripts/PlayButton.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 148.0
+radius = 150.0
 
 [node name="Menu" type="Node"]
 script = ExtResource( 1 )
@@ -17,10 +17,12 @@ script = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="PlayButton" type="Area2D" parent="."]
-script = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayButton"]
-shape = SubResource( 1 )
+script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="PlayButton"]
-texture = ExtResource( 4 )
+position = Vector2( 434.247, 141.966 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayButton"]
+position = Vector2( 434.247, 141.966 )
+shape = SubResource( 1 )
