@@ -15,13 +15,19 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Marbster"
+config/name="EasingDemo"
 run/main_scene="res://scenes/menu/menu.tscn"
 
 [autoload]
 
 Ease="*res://scripts/Ease.gd"
 Time="*res://scripts/Time.gd"
+Settings="*res://scripts/Settings.gd"
+
+[display]
+
+window/size/width=1600
+window/size/height=900
 
 [editor_plugins]
 

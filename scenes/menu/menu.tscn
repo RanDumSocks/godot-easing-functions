@@ -1,9 +1,35 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://scenes/menu/scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://scenes/menu/scripts/Background.gd" type="Script" id=2]
-[ext_resource path="res://scenes/menu/images/play.png" type="Texture" id=3]
-[ext_resource path="res://scenes/menu/scripts/PlayButton.gd" type="Script" id=4]
+[ext_resource path="res://scenes/menu/images/testBtn.png" type="Texture" id=3]
+[ext_resource path="res://scenes/menu/scripts/MenuButton.gd" type="Script" id=4]
+[ext_resource path="res://scenes/menu/scripts/easingTests/PlayButton2.gd" type="Script" id=5]
+[ext_resource path="res://scenes/menu/scripts/easingTests/PlayButton3.gd" type="Script" id=6]
+[ext_resource path="res://scenes/menu/scripts/ButtonController.gd" type="Script" id=7]
+[ext_resource path="res://scenes/menu/scripts/easingTests/PlayButton4.gd" type="Script" id=8]
+[ext_resource path="res://scenes/menu/scripts/easingTests/PlayButton5.gd" type="Script" id=9]
+[ext_resource path="res://scenes/menu/scripts/easingTests/PlayButton6.gd" type="Script" id=10]
+[ext_resource path="res://scenes/menu/scripts/easingTests/PlayButton7.gd" type="Script" id=11]
+[ext_resource path="res://scenes/menu/scripts/easingTests/PlayButton8.gd" type="Script" id=12]
+[ext_resource path="res://scenes/menu/scripts/ButtonController2.gd" type="Script" id=13]
+[ext_resource path="res://scenes/menu/scripts/easingTests/in/PlayButton3.gd" type="Script" id=14]
+[ext_resource path="res://scenes/menu/scripts/easingTests/in/PlayButton8.gd" type="Script" id=15]
+[ext_resource path="res://scenes/menu/scripts/easingTests/in/PlayButton2.gd" type="Script" id=16]
+[ext_resource path="res://scenes/menu/scripts/easingTests/in/PlayButton4.gd" type="Script" id=17]
+[ext_resource path="res://scenes/menu/scripts/easingTests/in/PlayButton5.gd" type="Script" id=18]
+[ext_resource path="res://scenes/menu/scripts/easingTests/in/PlayButton6.gd" type="Script" id=19]
+[ext_resource path="res://scenes/menu/scripts/easingTests/in/PlayButton.gd" type="Script" id=20]
+[ext_resource path="res://scenes/menu/scripts/easingTests/in/PlayButton7.gd" type="Script" id=21]
+[ext_resource path="res://scenes/menu/scripts/ButtonController3.gd" type="Script" id=22]
+[ext_resource path="res://scenes/menu/scripts/easingTests/inout/PlayButton3.gd" type="Script" id=23]
+[ext_resource path="res://scenes/menu/scripts/easingTests/inout/PlayButton8.gd" type="Script" id=24]
+[ext_resource path="res://scenes/menu/scripts/easingTests/inout/PlayButton2.gd" type="Script" id=25]
+[ext_resource path="res://scenes/menu/scripts/easingTests/inout/PlayButton6.gd" type="Script" id=26]
+[ext_resource path="res://scenes/menu/scripts/easingTests/inout/PlayButton7.gd" type="Script" id=27]
+[ext_resource path="res://scenes/menu/scripts/easingTests/inout/PlayButton4.gd" type="Script" id=28]
+[ext_resource path="res://scenes/menu/scripts/easingTests/inout/PlayButton5.gd" type="Script" id=29]
+[ext_resource path="res://scenes/menu/scripts/easingTests/inout/PlayButton.gd" type="Script" id=30]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 150.0
@@ -11,20 +37,280 @@ radius = 150.0
 [node name="Menu" type="Node"]
 script = ExtResource( 1 )
 
-[node name="MenuItems" type="Node2D" parent="."]
-
 [node name="Background" type="Node2D" parent="."]
 script = ExtResource( 2 )
 
-[node name="PlayButton" type="Area2D" parent="."]
-position = Vector2( 0.0934448, -0.306145 )
-scale = Vector2( 0.333333, 0.333333 )
-script = ExtResource( 4 )
+[node name="ButtonController2" type="Node" parent="."]
+script = ExtResource( 13 )
 
-[node name="Sprite" type="Sprite" parent="PlayButton"]
-position = Vector2( 269.427, -223.939 )
+[node name="PlayButton3" type="Area2D" parent="ButtonController2"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController2/PlayButton3"]
 texture = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayButton"]
-position = Vector2( 269.427, -223.939 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController2/PlayButton3"]
+shape = SubResource( 1 )
+
+[node name="PlayButton8" type="Area2D" parent="ButtonController2"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 15 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController2/PlayButton8"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController2/PlayButton8"]
+shape = SubResource( 1 )
+
+[node name="PlayButton2" type="Area2D" parent="ButtonController2"]
+position = Vector2( 300, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 16 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController2/PlayButton2"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController2/PlayButton2"]
+shape = SubResource( 1 )
+
+[node name="PlayButton4" type="Area2D" parent="ButtonController2"]
+position = Vector2( -2.28882e-05, 0.999954 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 17 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController2/PlayButton4"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController2/PlayButton4"]
+shape = SubResource( 1 )
+
+[node name="PlayButton5" type="Area2D" parent="ButtonController2"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 18 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController2/PlayButton5"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController2/PlayButton5"]
+shape = SubResource( 1 )
+
+[node name="PlayButton6" type="Area2D" parent="ButtonController2"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController2/PlayButton6"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController2/PlayButton6"]
+shape = SubResource( 1 )
+
+[node name="PlayButton" type="Area2D" parent="ButtonController2"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 20 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController2/PlayButton"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController2/PlayButton"]
+shape = SubResource( 1 )
+
+[node name="PlayButton7" type="Area2D" parent="ButtonController2"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 21 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController2/PlayButton7"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController2/PlayButton7"]
+shape = SubResource( 1 )
+
+[node name="ButtonController" type="Node" parent="."]
+script = ExtResource( 7 )
+
+[node name="PlayButton3" type="Area2D" parent="ButtonController"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController/PlayButton3"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController/PlayButton3"]
+shape = SubResource( 1 )
+
+[node name="PlayButton8" type="Area2D" parent="ButtonController"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController/PlayButton8"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController/PlayButton8"]
+shape = SubResource( 1 )
+
+[node name="PlayButton2" type="Area2D" parent="ButtonController"]
+position = Vector2( 300, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 5 )
+init_position = Vector2( 300, 200 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController/PlayButton2"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController/PlayButton2"]
+shape = SubResource( 1 )
+
+[node name="PlayButton4" type="Area2D" parent="ButtonController"]
+position = Vector2( -2.28882e-05, 0.999954 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController/PlayButton4"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController/PlayButton4"]
+shape = SubResource( 1 )
+
+[node name="PlayButton5" type="Area2D" parent="ButtonController"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController/PlayButton5"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController/PlayButton5"]
+shape = SubResource( 1 )
+
+[node name="PlayButton6" type="Area2D" parent="ButtonController"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController/PlayButton6"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController/PlayButton6"]
+shape = SubResource( 1 )
+
+[node name="PlayButton" type="Area2D" parent="ButtonController"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 4 )
+init_position = Vector2( 100, 200 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController/PlayButton"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController/PlayButton"]
+shape = SubResource( 1 )
+
+[node name="PlayButton7" type="Area2D" parent="ButtonController"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 11 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController/PlayButton7"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController/PlayButton7"]
+shape = SubResource( 1 )
+
+[node name="ButtonController3" type="Node" parent="."]
+script = ExtResource( 22 )
+
+[node name="PlayButton3" type="Area2D" parent="ButtonController3"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 23 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController3/PlayButton3"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController3/PlayButton3"]
+shape = SubResource( 1 )
+
+[node name="PlayButton8" type="Area2D" parent="ButtonController3"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 24 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController3/PlayButton8"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController3/PlayButton8"]
+shape = SubResource( 1 )
+
+[node name="PlayButton2" type="Area2D" parent="ButtonController3"]
+position = Vector2( 300, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController3/PlayButton2"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController3/PlayButton2"]
+shape = SubResource( 1 )
+
+[node name="PlayButton4" type="Area2D" parent="ButtonController3"]
+position = Vector2( -2.28882e-05, 0.999954 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 28 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController3/PlayButton4"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController3/PlayButton4"]
+shape = SubResource( 1 )
+
+[node name="PlayButton5" type="Area2D" parent="ButtonController3"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 29 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController3/PlayButton5"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController3/PlayButton5"]
+shape = SubResource( 1 )
+
+[node name="PlayButton6" type="Area2D" parent="ButtonController3"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 26 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController3/PlayButton6"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController3/PlayButton6"]
+shape = SubResource( 1 )
+
+[node name="PlayButton" type="Area2D" parent="ButtonController3"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 30 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController3/PlayButton"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController3/PlayButton"]
+shape = SubResource( 1 )
+
+[node name="PlayButton7" type="Area2D" parent="ButtonController3"]
+position = Vector2( 100, 200 )
+scale = Vector2( 0.333333, 0.333333 )
+script = ExtResource( 27 )
+
+[node name="Sprite" type="Sprite" parent="ButtonController3/PlayButton7"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonController3/PlayButton7"]
 shape = SubResource( 1 )
