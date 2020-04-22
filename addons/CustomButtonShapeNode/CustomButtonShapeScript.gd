@@ -18,6 +18,7 @@ func _ready():
    get_tree().connect("tree_changed", self, "_on_tree_changed")
    self.connect("mouse_entered", self, "_on_mouse_entered")
    self.connect("mouse_exited", self, "_on_mouse_exited")
+   position = Vector2(0, 0)
    for child in get_children():
       child.position = position
 
@@ -61,6 +62,10 @@ func set_scale_pixel(pixel_scale: float, by_height=true):
       push_warning("Sprite scale %2.2f > 1, may experience artifacts" % new_scale)
    elif new_scale <= 0:
       push_warning("Sprite scale %2.2f <= 0" % new_scale)
+
+func get_scale_pixel(by_height=true):
+   var tex = _sprite.texture
+   return scale.y * tex.get_height() if by_height else scale.x * tex.get_width()
 
 # Gets the sprite
 func get_sprite():

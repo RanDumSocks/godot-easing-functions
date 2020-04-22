@@ -17,12 +17,14 @@ script = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="PlayButton" type="Area2D" parent="."]
+position = Vector2( 0.0934448, -0.306145 )
+scale = Vector2( 0.333333, 0.333333 )
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="PlayButton"]
-position = Vector2( 434.247, 141.966 )
+position = Vector2( 269.427, -223.939 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayButton"]
-position = Vector2( 434.247, 141.966 )
+position = Vector2( 269.427, -223.939 )
 shape = SubResource( 1 )
